@@ -49,3 +49,12 @@
 [user]
 	email = americano@gmail.com
 	name = Fernando Americano
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[mergetool "sublime"]
+	cmd = subl -w $MERGED
+	trustExitCode = false
+[merge]
+	tool = sublime
